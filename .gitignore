@@ -1,0 +1,37 @@
+# Entornos virtuales
+venv/
+env/
+.venv/
+venv310/
+
+# Variables de entorno
+.env
+.env.local
+
+# CrewAI storage
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Logs
+*.log
+a2a_communication.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Outputs
+report.md
+output/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Planning
+PLAN.md
