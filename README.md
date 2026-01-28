@@ -59,8 +59,34 @@ Debido a la arquitectura Cliente-Servidor, necesitas ejecutar dos procesos en te
 
 - **Python 3.10** (Requerido para compatibilidad con `crewai` y `fastmcp`).
 - Credenciales de Azure configuradas en `.env`.
+- **Streamlit**: Instalado en el entorno (`pip install streamlit`).
 
-### PASO 1: Iniciar el Servidor MCP (Terminal 1)
+## 🖥️ OPCIÓN A: Interfaz Web (Streamlit) - ¡NUEVO
+
+Una interfaz visual moderna con historial de chat y **selector de subscripción Azure** incorporado.
+
+**Terminal 2 (Agente):**
+
+```powershell
+cd mcpddgs
+.\venv\Scripts\activate
+streamlit run streamlit_app.py
+```
+
+## ⌨️ OPCIÓN B: Interfaz de Consola (CLI)
+
+La interfaz clásica rápida.
+
+**Terminal 2 (Agente):**
+
+```powershell
+cd mcpddgs
+.\venv\Scripts\activate
+# Ejecuta el cliente (ya no requiere definir PYTHONPATH gracias a la configuración del proyecto)
+python -m a2a_protocolo_crewai.main
+```
+
+### PASO 1 (Común): Iniciar el Servidor MCP (Terminal 1)
 
 Este servidor expone las herramientas de búsqueda.
 
@@ -72,17 +98,6 @@ python mcp_server.py
 ```
 
 *Debe mantenerse corriendo en segundo plano.*
-
-### PASO 2: Iniciar el Agente (Terminal 2)
-
-El orquestador que interactúa contigo y conecta con el servidor.
-
-```powershell
-cd mcpddgs
-.\venv\Scripts\activate
-# Ejecuta el cliente (ya no requiere definir PYTHONPATH gracias a la configuración del proyecto)
-python -m a2a_protocolo_crewai.main
-```
 
 ---
 
