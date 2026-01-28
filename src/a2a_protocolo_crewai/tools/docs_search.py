@@ -41,7 +41,8 @@ class AuthDocsSearchTool(BaseTool):
             # Conexión SSE al servidor MCP local (asumimos puerto 8000)
             url = "http://localhost:8000/sse"
             
-            async with sse_client(url) as (read, write):
+            # Aumentamos timeout de conexion
+            async with sse_client(url, timeout=30) as (read, write):
                 async with ClientSession(read, write) as session:
                     await session.initialize()
                     

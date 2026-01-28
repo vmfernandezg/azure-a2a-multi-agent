@@ -67,8 +67,8 @@ Este servidor expone las herramientas de búsqueda.
 ```powershell
 cd mcpddgs
 .\venv\Scripts\activate
-# Inicia el servidor MCP en modo SSE en el puerto 8000
-fastmcp run mcp_server.py --transport sse --port 8000
+# Inicia el servidor MCP (configurado en el código en el puerto 8000)
+python mcp_server.py
 ```
 
 *Debe mantenerse corriendo en segundo plano.*
@@ -80,9 +80,7 @@ El orquestador que interactúa contigo y conecta con el servidor.
 ```powershell
 cd mcpddgs
 .\venv\Scripts\activate
-# Configura el path para encontrar los módulos
-$env:PYTHONPATH="src"
-# Ejecuta el cliente
+# Ejecuta el cliente (ya no requiere definir PYTHONPATH gracias a la configuración del proyecto)
 python -m a2a_protocolo_crewai.main
 ```
 
