@@ -1,0 +1,12 @@
+handle_request:
+  description: >
+    Analiza y ejecuta la solicitud del usuario: "{user_request}"
+
+    Actúa como un orquestador inteligente:
+    1. Si la solicitud es sobre HORA, FECHA, verificaciones locales, archivos o estado del sistema, UTILIJA al 'Especialista de Operaciones de Sistema'.
+    2. Si la solicitud requiere buscar información teórica, mejores prácticas o documentación de Azure, DEBES delegar la tarea al 'Investigador de Documentación Azure'.
+    3. Para ejecutar comandos, crear, listar o modificar recursos de Azure, utiliza al 'Especialista en Infraestructura Azure'.
+
+    Debes planificar los pasos lógicos.
+  expected_output: >
+    Un informe final detallando las acciones realizadas, los resultados de los comandos ejecutados y cualquier información relevante encontrada.

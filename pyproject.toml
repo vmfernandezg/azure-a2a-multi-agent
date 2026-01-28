@@ -1,0 +1,22 @@
+[project]
+name = "a2a_protocolo_crewai"
+version = "2.0.0"
+description = "Orquestador Azure con Protocolo A2A (Agent-to-Agent) usando CrewAI"
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.86.0",
+    "python-dotenv>=1.0.0",
+    "azure-identity>=1.15.0",
+    "ddgs>=5.0.0",
+]
+
+[project.scripts]
+a2a-crew = "a2a_protocolo_crewai.main:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
